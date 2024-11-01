@@ -1573,6 +1573,11 @@
   optionalDependencies:
     prettier "^1.18.2 || ^2.0.0"
 
+"@vue/devtools-api@^6.6.4":
+  version "6.6.4"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz#cbe97fe0162b365edc1dba80e173f90492535343"
+  integrity sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==
+
 "@vue/reactivity@3.5.12":
   version "3.5.12"
   resolved "https://registry.npmmirror.com/@vue/reactivity/-/reactivity-3.5.12.tgz#a2815d91842ed7b9e7e7936c851923caf6b6e603"
@@ -5786,6 +5791,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.npmmirror.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+v-svg-icons@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/v-svg-icons/-/v-svg-icons-1.2.1.tgz#2fed8948d49ab8c10b5cd6352f38a78b9b47081c"
+  integrity sha512-RpKleDEv8kL0BoF0FPFRVYwCHVppJmfikNPCrcpKoTdHEo+BlJ0ZLZjns2QHoNn7ChR9QDyywiIHXKR/3MQ9YQ==
 
 v8-compile-cache@^2.0.3:
   version "2.4.0"
