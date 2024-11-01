@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
     <HeaderComponent />
 
     <HomeComponent />
@@ -44,10 +43,9 @@ export default {
 
 section {
   min-height: 100vh;
-  padding: 20px;
-  margin-top: 80px;
-  padding-top: 40px;
+  padding: 60px 20px 20px;
 }
+
 
 nav ul {
   display: flex;
