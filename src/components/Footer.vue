@@ -1,35 +1,90 @@
 <template>
-  <nav>
-    <div class="navbar-container">
-      <div class="logo">
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Company Info Section -->
+      <div class="footer-info">
+        <h2>{{ companyName }}</h2>
+        <p>{{ address }}</p>
+        <p>Telefono: {{ phone }}</p>
+        <p>Email: {{ email }}</p>
       </div>
-      <div class="menu-toggle" @click="toggleMenu">
-        <div class="bar" v-bind:class="{ 'open': isMenuOpen }"></div>
-        <div class="bar" v-bind:class="{ 'open': isMenuOpen }"></div>
-        <div class="bar" v-bind:class="{ 'open': isMenuOpen }"></div>
+
+      <!-- Navigation Links Section -->
+      <div class="footer-links">
+        <h3>Link Rapidi</h3>
+        <ul>
+          <li><a @click.prevent="scrollToSection('home')">{{ home }}</a></li>
+          <li><a @click.prevent="scrollToSection('about')">{{ about }}</a></li>
+          <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+          <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
+        </ul>
       </div>
-      <ul :class="{ 'active': isMenuOpen }">
-        <li><a @click.prevent="scrollToSection('home')">Home</a></li>
-        <li><a @click.prevent="scrollToSection('about')">About</a></li>
-        <li><a @click.prevent="scrollToSection('services')">Services</a></li>
-        <li><a @click.prevent="scrollToSection('contact')">Contact</a></li>
-      </ul>
+
+      <!-- Social Media Section -->
+      <div class="footer-social">
+        <h3>Seguici</h3>
+        <div class="social-icons">
+          <a v-for="link in socialLinks" :key="link.name" :href="link.url" target="_blank" :aria-label="link.name">
+            <IconComponent :name="link.icon" :color="link.color"/>
+          </a>
+        </div>
+      </div>
     </div>
-  </nav>
+    <div class="footer-bottom">
+      <p>&copy; 2023 {{ companyName }}. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
 </template>
 
+
 <script>
+
 export default {
-  name: "NavbarComponent",
-  data() {
-    return {
-      isMenuOpen: false // Stato del menu hamburger
-    };
+  name: "FooterComponent",
+  props: {
+    home: {
+      type: String,
+      default: "Home" // Default title
+    },
+    about: {
+      type: String,
+      default: "About" // Default content
+    },
+    services: {
+      type: String,
+      default: "Services" // Default content
+    },
+    contact: {
+      type: String,
+      default: "Contact" // Default content
+    },
+    companyName: {
+      type: String,
+      default: "Nome Azienda"
+    },
+    address: {
+      type: String,
+      default: "Via Roma 123, 00100 Roma, Italia"
+    },
+    phone: {
+      type: String,
+      default: "+39 012 345 6789"
+    },
+    email: {
+      type: String,
+      default: "info@example.com"
+    },
+    socialLinks: {
+      type: Array,
+      default: () => [
+        { name: "Facebook", url: "https://facebook.com", icon: "facebook-f", color: "#4267B2" }, // Blu
+        { name: "Instagram", url: "https://instagram.com", icon: "instagram", color: "#C13584" }, // Rosso/Rosa
+        { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin", color: "#0077B5" }, // Blu
+        { name: "Twitter", url: "https://twitter.com", icon: "twitter", color: "#1DA1F2" } // Blu
+      ]
+    }
   },
   methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen; // Alterna lo stato del menu
-    },
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -41,95 +96,96 @@ export default {
 }
 </script>
 
+
 <style scoped>
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s;
+.footer {
+  background-color: #BEC8B7;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
-.navbar-container {
+.footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px; /* Padding per la navbar */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.logo img {
-  height: 40px; /* Dimensione del logo */
+.footer-info,
+.footer-links,
+.footer-social {
+  flex: 1 1 300px;
+  min-width: 300px;
 }
 
-.menu-toggle {
-  display: none; /* Nascondi il toggle per desktop */
-  flex-direction: column;
-  cursor: pointer;
+.footer-info h2 {
+  font-size: 1.5rem;
 }
 
-.menu-toggle .bar {
-  height: 4px;
-  width: 25px;
-  background: #333;
-  margin: 4px 0;
-  transition: all 0.3s ease; /* Transizione per l'apertura */
+.footer-info p {
+  margin: 5px 0;
 }
 
-ul {
-  display: flex;
+.footer-links h3,
+.footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
   list-style: none;
-  gap: 15px;
-  margin: 0;
   padding: 0;
 }
 
-ul.active {
-  display: flex; /* Mostra il menu quando attivo */
+.footer-links li {
+  margin: 5px 0;
 }
 
-ul li {
-  cursor: pointer;
-}
-
-ul li a {
+.footer-links a {
   text-decoration: none;
-  color: #2c3e50;
-  font-weight: 500;
-  padding: 10px 15px; /* Padding per i link */
   transition: color 0.3s;
 }
 
-ul li a:hover {
-  color: #42b983; /* Colore hover */
+.footer-links a:hover {
+  color: #ffffff;
 }
 
-/* Stile per i dispositivi mobili */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Mostra il toggle per mobile */
-  }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-  ul {
-    display: none; /* Nascondi il menu per mobile */
-    flex-direction: column; /* Imposta il menu in colonna */
-    position: absolute;
-    top: 60px; /* Posizione sotto la navbar */
-    left: 0;
-    right: 0;
-    background: white; /* Sfondo del menu */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
 
-  ul.active {
-    display: flex; /* Mostra il menu quando attivo */
-  }
+.social-icons a:hover {
+  transform: scale(1.1);
+}
 
-  ul li {
-    width: 100%; /* Larghezza del 100% per ogni voce del menu */
-    text-align: center; /* Centra il testo */
-  }
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ffffff;
 }
 </style>

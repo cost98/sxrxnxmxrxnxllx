@@ -9,6 +9,8 @@
     <ServicesComponent />
 
     <ContactComponent />
+
+    <FooterComponent />
   </div>
 </template>
 
@@ -18,6 +20,7 @@ import AboutComponent from './components/About.vue'
 import ServicesComponent from './components/Services.vue'
 import ContactComponent from './components/Contact.vue'
 import HeaderComponent from "@/components/Header.vue"
+import FooterComponent from "@/components/Footer.vue"
 
 export default {
   name: 'App',
@@ -26,7 +29,8 @@ export default {
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   }
 }
 </script>
