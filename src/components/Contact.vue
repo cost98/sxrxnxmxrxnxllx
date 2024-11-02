@@ -1,8 +1,9 @@
 <template>
   <section id="contact" class="contact-section">
-    <h1>
-      I Nostri <span class="highlight">Contatti</span>
-    </h1>
+    <TitleComponent
+        firstPart="I Nostri "
+        secondPart="Contatti"
+    />
     <p class="intro-text">Siamo qui per aiutarti. Contattaci tramite uno dei seguenti metodi:</p>
 
     <div class="contact-container">
@@ -54,8 +55,11 @@
 </template>
 
 <script>
+import TitleComponent from "@/components/Title.vue";
+
 export default {
   name: "ContactComponent",
+  components: {TitleComponent},
   props: {
     phone: {
       type: String,
@@ -80,18 +84,6 @@ export default {
   background: linear-gradient(to right, #f7f9fa, #ffffff);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.highlight {
-  color: #BEC8B7;
 }
 
 .intro-text {
