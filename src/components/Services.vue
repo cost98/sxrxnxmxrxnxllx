@@ -1,8 +1,10 @@
 <template>
   <section id="services" class="services-section">
-    <h1>
-      I Nostri <span class="highlight">Servizi</span> di Supporto Psicologico
-    </h1>
+    <TitleComponent
+        firstPart="I Nostri "
+        secondPart="Servizi"
+        thirdPart=" di Supporto Psicologico"
+    />
     <p class="intro-text">Scopri come possiamo aiutarti con i nostri servizi personalizzati.</p>
     <p class="modalities">Modalità di servizio disponibili:</p>
     <ul class="modalities-list">
@@ -27,8 +29,11 @@
 </template>
 
 <script>
+import TitleComponent from "@/components/Title.vue";
+
 export default {
   name: "ServicesComponent",
+  components: {TitleComponent},
   data() {
     return {
       services: [
