@@ -1,3 +1,6 @@
+# 0.4.0
+- [EDITING] Generic changes
+
 # 0.3.0
 - [EDITING] Add Timeline section
 - [EDITING] Add Loader and Title component
