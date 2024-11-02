@@ -1,7 +1,5 @@
 <template>
-  <h1>
-    {{ firstPart }} <span class="highlight">{{ secondPart }}</span> {{ thirdPart}}
-  </h1>
+  <h1>{{ firstPart }}<span class="highlight">{{ secondPart }}</span>{{ thirdPart}}</h1>
 </template>
 
 <script>

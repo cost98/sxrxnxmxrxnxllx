@@ -92,7 +92,7 @@ nav {
 }
 
 .logo img {
-  height: 40px; /* Logo size */
+  height: 60px; /* Logo size */
 }
 
 .menu-toggle {
