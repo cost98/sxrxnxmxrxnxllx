@@ -8,13 +8,12 @@
         <p>
           Sono la <strong>Dott.ssa Serena Marinelli</strong>, psicologa clinica e della salute, laureata presso l’Università di Pisa. Attualmente esercito la libera professione a <strong>Roma</strong> e collaboro con l’<strong>ASST Spedali Civili di Brescia</strong>, dove mi occupo di psicologia delle cure primarie.
         </p>
-        <a href="#" class="cta-button">Contattami</a>
       </div>
 
       <!-- Colonna dell'immagine -->
       <div class="image-column">
         <div class="image-container">
-          <img src="https://serenamarinelli.altervista.org/wp-content/uploads/2024/10/SERENA-MARINELLI-8.png" alt="Foto di Serena Marinelli" class="profile-image" />
+          <img src="@/assets/personal.webp" alt="Foto di Serena Marinelli" class="profile-image" />
         </div>
       </div>
     </div>
@@ -34,7 +33,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px; /* Ridotto per evitare troppo spazio */
   gap: 50px;
   padding: 40px; /* Ridotto per rendere la card più compatta */
   background-color: #ffffff;
@@ -48,13 +46,13 @@ export default {
 }
 
 .text-column h2 {
-  font-size: 2.5em;
+  font-size: 4em;
   color: #BEC8B7;
   margin: 0;
 }
 
 .text-column h3 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #BEC8B7;
   margin-top: 5px;
   font-weight: 400;
@@ -62,7 +60,7 @@ export default {
 
 .text-column p {
   margin-top: 15px;
-  font-size: 1.1em;
+  font-size: 1.5em;
   line-height: 1.6;
   color: #444;
 }
@@ -74,7 +72,7 @@ export default {
   background-color: #BEC8B7;
   color: #fff;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 2em;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
@@ -93,8 +91,6 @@ export default {
 
 .image-container {
   position: relative;
-  width: 350px; /* Ridotto leggermente */
-  height: 350px;
   background-color: transparent; /* Colore di sfondo trasparente per rimuovere il secondo cerchio */
   border-radius: 50%;
   display: flex;
@@ -108,7 +104,7 @@ export default {
   background-color: #BEC8B7;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Media queries per schermi piccoli */
@@ -122,20 +118,16 @@ export default {
   }
 
   .text-column h2 {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .text-column h3 {
-    font-size: 1.3em;
+    font-size: 2em;
   }
 
   .text-column p {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
-  .image-container {
-    width: 250px; /* Ridotto su schermi piccoli */
-    height: 250px;
-  }
 }
 </style>

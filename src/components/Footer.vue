@@ -60,7 +60,7 @@ export default {
     },
     companyName: {
       type: String,
-      default: "Nome Azienda"
+      default: "Serene Marinelli"
     },
     address: {
       type: String,
@@ -99,10 +99,10 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #BEC8B7;
-  color: #ffffff;
+  color: black;
   padding: 40px 20px;
   text-align: center;
+  background: white;
   font-size: 0.9rem;
 }
 
@@ -151,7 +151,7 @@ export default {
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: black;
 }
 
 .social-icons {
@@ -180,12 +180,14 @@ export default {
 }
 
 .footer-bottom {
+  border-top: 2px solid black;
   margin-top: 20px;
   padding-top: 10px;
 }
 
 .footer-bottom p {
+  text-align: right;
   margin: 0;
-  color: #ffffff;
+  color: black;
 }
 </style>
