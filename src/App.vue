@@ -7,10 +7,10 @@
     <div v-if="!isLoading">
       <HeaderComponent />
       <HomeComponent />
-      <TimelineComponent />
       <AboutComponent />
-      <ServicesComponent />
+      <TimelineComponent  reversed/>
       <ContactComponent />
+      <ServicesComponent />
       <FooterComponent />
     </div>
   </div>
@@ -47,7 +47,8 @@ export default {
         require('@/assets/family-support.webp'),
         require('@/assets/individual-support.webp'),
         require('@/assets/couple-support.webp'),
-        require('@/assets/bariatric-evaluation.webp')
+        require('@/assets/bariatric-evaluation.webp'),
+        require('@/assets/personal.webp')
         // Puoi aggiungere altre immagini o assets in questo array
       ],
     };
@@ -92,8 +93,7 @@ export default {
 }
 
 section {
-  min-height: 100vh;
-  padding: 60px 20px 20px;
+  padding: 60px 20px 60px 20px;
 }
 
 nav ul {
