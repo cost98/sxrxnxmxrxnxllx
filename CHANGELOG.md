@@ -1,3 +1,6 @@
+# 0.5.0
+- [EDITING] Generic changes
+
 # 0.4.0
 - [EDITING] Generic changes
 
