@@ -34,15 +34,16 @@ export default {
 .loader-logo {
   width: 100px;
   height: 100px;
-  animation: spin 1.5s linear infinite;
+  animation: scale 1.5s ease-in-out infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+/* Animazione di ingrandimento e riduzione */
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1); /* Dimensione iniziale e finale */
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.2); /* Ingrandimento al 50% dell'animazione */
   }
 }
 </style>
