@@ -1,5 +1,5 @@
 <template>
-  <section id="timeline" class="timeline-section">
+  <section id="working" class="timeline-section">
     <TitleComponent
         firstPart="La mia "
         secondPart="Formazione"
@@ -18,7 +18,7 @@
               class="content__heading">
             {{ item.title }}
           </h2>
-          <p v-if="item.text.length">{{ item.text }}</p>
+          <p v-if="item.text.length" class="text">{{ item.text }}</p>
           <p
               v-if="item.date.length"
               class="content__date">
@@ -119,14 +119,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.text{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .timeline-section {
   text-align: center;
   font-size: 2vh;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #ece9e6, #ffffff);
+  padding: 80px 20px;
+  background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .timeline {
@@ -247,6 +249,7 @@ export default {
     }
 
     &__date {
+      padding-bottom: 10px;
       font-style: italic;
     }
 

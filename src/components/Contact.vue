@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="contact-section">
     <TitleComponent
-        firstPart="I Nostri "
+        firstPart="I miei "
         secondPart="Contatti"
     />
     <p class="intro-text">Siamo qui per aiutarti. Contattaci tramite uno dei seguenti metodi:</p>
@@ -80,7 +80,7 @@ export default {
 <style scoped>
 .contact-section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 80px 20px;
   background: linear-gradient(to right, #f7f9fa, #ffffff);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);

@@ -1,11 +1,11 @@
 <template>
   <section id="services" class="services-section">
     <TitleComponent
-        firstPart="I Nostri "
+        firstPart="I miei "
         secondPart="Servizi"
         thirdPart=" di Supporto Psicologico"
     />
-    <p class="intro-text">Scopri come possiamo aiutarti con i nostri servizi personalizzati.</p>
+    <p class="intro-text">Scopri come posso aiutarti con i miei servizi personalizzati.</p>
     <p class="modalities">Modalità di servizio disponibili:</p>
     <ul class="modalities-list">
       <li>- Consulenza psicologica in presenza</li>
@@ -90,10 +90,9 @@ export default {
 <style scoped>
 .services-section {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #ece9e6, #ffffff);
+  padding: 80px 20px;
+  background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 

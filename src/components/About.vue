@@ -37,7 +37,7 @@ export default {
 <style scoped>
 /* Sezione principale */
 .about-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(to right, #f7f9fa, #ffffff);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
