@@ -15,6 +15,8 @@
         <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
         <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
         <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+        <li><a @click.prevent="scrollToSection('job')">{{ jobs }}</a></li>
+
       </ul>
     </div>
 
@@ -27,6 +29,7 @@
           <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
           <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
           <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+          <li><a @click.prevent="scrollToSection('job')">{{ jobs }}</a></li>
         </ul>
       </div>
     </div>
@@ -57,6 +60,10 @@ export default {
     working: {
       type: String,
       default: "Formazione" // Default content
+    },
+    jobs: {
+      type: String,
+      default: "Esperienza" // Default content
     }
   },
   data() {

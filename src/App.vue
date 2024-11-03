@@ -11,6 +11,7 @@
       <TimelineComponent  reversed/>
       <ContactComponent />
       <ServicesComponent />
+      <JobComponent/>
       <FooterComponent />
       <div
           v-if="showScrollButton"
@@ -33,10 +34,12 @@ import HeaderComponent from '@/components/Header.vue';
 import FooterComponent from '@/components/Footer.vue';
 import TimelineComponent from '@/components/Timeline.vue';
 import LoaderComponent from '@/components/Loader.vue';
+import JobComponent from "@/components/Job.vue";
 
 export default {
   name: 'App',
   components: {
+    JobComponent,
     HomeComponent,
     AboutComponent,
     ServicesComponent,
@@ -44,13 +47,14 @@ export default {
     HeaderComponent,
     FooterComponent,
     TimelineComponent,
-    LoaderComponent,
+    LoaderComponent
   },
   data() {
     return {
       isLoading: true,
       assets: [
-        require('@/assets/logo.png'), // Aggiungi qui il logo o altre immagini
+        require('@/assets/logo.png'),
+        require('@/assets/logo_string.png'),
         require('@/assets/parent-support.webp'),
         require('@/assets/family-support.webp'),
         require('@/assets/individual-support.webp'),
