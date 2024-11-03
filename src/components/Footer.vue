@@ -119,7 +119,6 @@ export default {
 .footer-links,
 .footer-social {
   flex: 1 1 300px;
-  min-width: 300px;
 }
 
 .footer-info h2 {
@@ -181,8 +180,8 @@ export default {
 
 .footer-bottom {
   border-top: 2px solid black;
-  margin-top: 20px;
-  padding-top: 10px;
+  margin-top: 150px;
+  padding-top: 20px;
 }
 
 .footer-bottom p {

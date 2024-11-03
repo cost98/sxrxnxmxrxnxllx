@@ -69,8 +69,14 @@ export default {
     },
   },
   mounted() {
-    // Chiama il metodo di caricamento e imposta isLoading a false al termine
-    this.loadAssets()
+    // Inizia a caricare gli asset
+    const assetPromise = this.loadAssets();
+
+    // Forza un caricamento minimo di 2 secondi
+    const minLoadingTime = new Promise((resolve) => setTimeout(resolve, 2000));
+
+    // Aspetta sia il caricamento degli asset che i 2 secondi minimi
+    Promise.all([assetPromise, minLoadingTime])
         .then(() => {
           this.isLoading = false;
         })
@@ -78,7 +84,7 @@ export default {
           console.error('Errore nel caricamento degli assets:', error);
           this.isLoading = false; // Anche in caso di errore nascondiamo il loader
         });
-  },
+  }
 };
 </script>
 

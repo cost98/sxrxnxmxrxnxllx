@@ -34,7 +34,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  padding: 40px; /* Ridotto per rendere la card più compatta */
+  padding: 100px; /* Ridotto per rendere la card più compatta */
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
@@ -65,22 +65,6 @@ export default {
   color: #444;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  background-color: #BEC8B7;
-  color: #fff;
-  text-decoration: none;
-  font-size: 2em;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #BEC8B7;
-}
-
 /* Colonna dell'immagine */
 .image-column {
   flex: 1;
@@ -107,14 +91,24 @@ export default {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Media queries per schermi piccoli */
-@media (max-width: 768px) {
+/* Media queries per schermi piccoli */@media (max-width: 768px) {
   .home-container {
-    flex-direction: row; /* Mantiene la disposizione testo-sinistra, immagine-destra */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 20px;
     padding: 20px;
     max-width: 100%;
+  }
+
+  /* Ordina la colonna dell'immagine per apparire subito dopo il titolo */
+  .image-column {
+    order: 1; /* Imposta l'immagine come primo elemento */
+    margin-top: 15px;
+  }
+
+  .text-column {
+    order: 2; /* Imposta il testo come secondo elemento */
   }
 
   .text-column h2 {
@@ -128,6 +122,6 @@ export default {
   .text-column p {
     font-size: 1.5em;
   }
-
 }
+
 </style>

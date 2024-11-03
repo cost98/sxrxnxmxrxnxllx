@@ -32,11 +32,19 @@ h1 {
   letter-spacing: 1px;
   padding-right: 10%;
   padding-left: 10%;
-
+  text-align: center;
 }
 
+
 .highlight {
+  text-align: center;
   color: #BEC8B7;
 }
 
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 8vw; /* Il font si adatterà alla larghezza del viewport */
+  }
+}
 </style>
