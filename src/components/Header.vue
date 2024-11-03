@@ -2,7 +2,7 @@
   <nav>
     <div class="navbar-container">
       <div class="logo">
-        <img src="@/assets/logo.png" alt="Logo" />
+        <img src="@/assets/logo_string.png" alt="Logo" />
       </div>
       <div class="menu-toggle" @click="toggleMenu">
         <div class="bar" v-bind:class="{ 'open': isMenuOpen }"></div>
@@ -140,7 +140,7 @@ ul li a {
 }
 
 ul li a:hover {
-  color: #42b983; /* Hover color */
+  color: #BEC8B7; /* Hover color */
 }
 
 /* Full-screen Overlay Menu Styles */
@@ -185,7 +185,7 @@ ul li a:hover {
 }
 
 .overlay-content li a:hover {
-  color: #42b983; /* Hover color for links in overlay */
+  color: #BEC8B7; /* Hover color for links in overlay */
 }
 
 @media (max-width: 768px) {
@@ -206,6 +206,10 @@ ul li a:hover {
     text-align: center; /* Center text */
     margin: 10px 0; /* Margin between items */
     padding: 15px 0; /* Add padding for more space */
+  }
+
+  .logo img {
+    height: 50px; /* Logo size */
   }
 }
 </style>

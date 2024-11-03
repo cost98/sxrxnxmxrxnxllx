@@ -12,6 +12,14 @@
       <ContactComponent />
       <ServicesComponent />
       <FooterComponent />
+      <div
+          v-if="showScrollButton"
+          @click="scrollToTop"
+          :class="{ 'scroll-to-top': true, show: showScrollButton }"
+          title="Torna su"
+      >
+        <IconComponent name="arrow-up"/>
+      </div>
     </div>
   </div>
 </template>
@@ -51,6 +59,7 @@ export default {
         require('@/assets/personal.webp')
         // Puoi aggiungere altre immagini o assets in questo array
       ],
+      showScrollButton: false,
     };
   },
   methods: {
@@ -63,12 +72,25 @@ export default {
           img.onerror = reject;
         });
       });
-
-      // Ritorna la Promise che risolve quando tutte le immagini sono caricate
       return Promise.all(promises);
     },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // Scrolling fluido
+      });
+    },
+    handleScroll() {
+      this.showScrollButton = window.scrollY > 300;
+    },
   },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+
   mounted() {
+    window.addEventListener('scroll', this.handleScroll);
     // Inizia a caricare gli asset
     const assetPromise = this.loadAssets();
 
@@ -121,6 +143,34 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #42b983;
+  color: #BEC8B7;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BEC8B7;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #BEC8B7;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: scale(1);
 }
 </style>

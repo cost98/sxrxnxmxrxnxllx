@@ -99,6 +99,7 @@ export default {
 
 <style scoped>
 .footer {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   color: black;
   padding: 40px 20px;
   text-align: center;
@@ -180,6 +181,7 @@ export default {
 
 .footer-bottom {
   border-top: 2px solid black;
+  opacity: 20%;
   margin-top: 150px;
   padding-top: 20px;
 }
