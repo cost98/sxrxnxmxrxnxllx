@@ -13,8 +13,6 @@
           :key="item._id"
       >
         <div class="content">
-          <!-- Icona -->
-          <icon-component :name="item.icon" color="#BEC8B7"/>
           <h2
               v-if="item.title.length"
               class="content__heading">
@@ -43,11 +41,10 @@
 
 <script>
 import TitleComponent from "@/components/Title.vue";
-import IconComponent from "v-svg-icons";
 
 export default {
   name: 'TimelineComponent',
-  components: {IconComponent, TitleComponent},
+  components: {TitleComponent},
   data() {
     return {
       inputData: [
@@ -56,48 +53,42 @@ export default {
           "title": "Laurea triennale",
           "text": "Laurea triennale in scienze e tecniche psicologiche presso Università G. D’Annunzio, Chieti",
           "date": "2014",
-          "tags": [],
-          "icon": "school"
+          "tags": []
         },
         {
           "_id": "2",
           "title": "Laurea magistrale",
           "text": "Laurea Magistrale in psicologia clinica e della salute presso Università di Pisa (votazione 110/110)",
           "date": "2017",
-          "tags": [],
-          "icon": "school"
+          "tags": []
         },
         {
           "_id": "3",
           "title": "Corso EMDR",
           "text": "Corso EMDR, livello 1 presso Centro di ricerche e studi in Psicotraumatologia",
           "date": "2021",
-          "tags": [],
-          "icon": "book"
+          "tags": []
         },
         {
           "_id": "4",
           "title": "Corso di alta formazione",
           "text": "Corso di alta formazione “L’approccio ricostruttivo interpersonale nella psicoterapia individuale sistemica e relazionale” presso Istituto Dedalus",
           "date": "2023",
-          "tags": [],
-          "icon": "book"
+          "tags": []
         },
         {
           "_id": "5",
           "title": "Master",
           "text": "“LO PSICOTERAPEUTA IN TRIBUNALE” MASTER IN PSICOLOGIA GIURIDICA E FORENSE",
           "date": "2023",
-          "tags": [],
-          "icon": "school"
+          "tags": []
         },
         {
           "_id": "6",
           "title": "Laureanda",
           "text": "Laureanda in psicoterapia sistemica relazionale presso Istituto Dedalus",
           "date": "2024",
-          "tags": [],
-          "icon": "school"
+          "tags": []
         }
       ]
 
@@ -131,6 +122,7 @@ export default {
 
 .timeline-section {
   text-align: center;
+  font-size: 2vh;
   padding: 60px 20px;
   background: linear-gradient(to right, #ece9e6, #ffffff);
   border-radius: 15px;
@@ -150,7 +142,7 @@ export default {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: snow;
+    background-color: #BEC8B7;
     top: 0;
     bottom: 0;
     left: 90%;

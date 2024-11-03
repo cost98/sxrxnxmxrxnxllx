@@ -12,8 +12,9 @@
       <ul v-if="!isMenuOpen" :class="{ 'active': isMenuOpen }" class="navbar-menu">
         <li><a @click.prevent="scrollToSection('home')">{{ home }}</a></li>
         <li><a @click.prevent="scrollToSection('about')">{{ about }}</a></li>
-        <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+        <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
         <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
+        <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
       </ul>
     </div>
 
@@ -23,8 +24,9 @@
         <ul>
           <li><a @click.prevent="scrollToSection('home')">{{ home }}</a></li>
           <li><a @click.prevent="scrollToSection('about')">{{ about }}</a></li>
-          <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+          <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
           <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
+          <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
         </ul>
       </div>
     </div>
@@ -42,15 +44,19 @@ export default {
     },
     about: {
       type: String,
-      default: "About" // Default content
+      default: "Riguardo me" // Default content
     },
     services: {
       type: String,
-      default: "Services" // Default content
+      default: "Servizi" // Default content
     },
     contact: {
       type: String,
-      default: "Contact" // Default content
+      default: "Contatti" // Default content
+    },
+    working: {
+      type: String,
+      default: "Formazione" // Default content
     }
   },
   data() {

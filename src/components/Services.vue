@@ -96,17 +96,6 @@ export default {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.highlight {
-  color: #BEC8B7;
-}
 
 .intro-text {
   font-size: 1.2rem;
@@ -213,10 +202,6 @@ h1 {
   margin: 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   transition: color 0.3s;
-}
-
-.service-card:hover .service-title {
-  color: #BEC8B7;
 }
 </style>
 
