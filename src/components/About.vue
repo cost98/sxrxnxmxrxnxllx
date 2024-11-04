@@ -41,6 +41,7 @@ export default {
   background: linear-gradient(to right, #f7f9fa, #ffffff);
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
 }
 
 /* Contenitore per il titolo */

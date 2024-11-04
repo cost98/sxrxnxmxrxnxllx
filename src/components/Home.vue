@@ -13,7 +13,7 @@
       <!-- Colonna dell'immagine -->
       <div class="image-column">
         <div class="image-container">
-          <img src="@/assets/personal.webp" alt="Foto di Serena Marinelli" class="profile-image" />
+          <img src="@/assets/personal.png" alt="Foto di Serena Marinelli" class="profile-image" />
         </div>
       </div>
     </div>

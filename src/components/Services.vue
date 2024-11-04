@@ -129,7 +129,7 @@ export default {
 
 .service-card {
   opacity: 0;
-  transform: translateY(30px);
+  transform: scale(1.05);
   background-size: cover;
   background-position: center;
   border-radius: 12px;
@@ -148,7 +148,7 @@ export default {
 }
 
 .service-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.10);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 

@@ -8,9 +8,10 @@
       <HeaderComponent />
       <HomeComponent />
       <AboutComponent />
-      <TimelineComponent  reversed/>
-      <ContactComponent />
       <ServicesComponent />
+      <ContactComponent />
+      <TimelineComponent  reversed/>
+      <JobComponent/>
       <FooterComponent />
       <div
           v-if="showScrollButton"
@@ -33,10 +34,12 @@ import HeaderComponent from '@/components/Header.vue';
 import FooterComponent from '@/components/Footer.vue';
 import TimelineComponent from '@/components/Timeline.vue';
 import LoaderComponent from '@/components/Loader.vue';
+import JobComponent from "@/components/Job.vue";
 
 export default {
   name: 'App',
   components: {
+    JobComponent,
     HomeComponent,
     AboutComponent,
     ServicesComponent,
@@ -44,19 +47,20 @@ export default {
     HeaderComponent,
     FooterComponent,
     TimelineComponent,
-    LoaderComponent,
+    LoaderComponent
   },
   data() {
     return {
       isLoading: true,
       assets: [
-        require('@/assets/logo.png'), // Aggiungi qui il logo o altre immagini
+        require('@/assets/logo.png'),
+        require('@/assets/logo_string.png'),
         require('@/assets/parent-support.webp'),
         require('@/assets/family-support.webp'),
         require('@/assets/individual-support.webp'),
         require('@/assets/couple-support.webp'),
         require('@/assets/bariatric-evaluation.webp'),
-        require('@/assets/personal.webp')
+        require('@/assets/personal.png')
         // Puoi aggiungere altre immagini o assets in questo array
       ],
       showScrollButton: false,
@@ -112,7 +116,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -154,7 +158,7 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #BEC8B7;
+  background-color: #709c94;
   color: white;
   font-size: 24px;
   border-radius: 50%;
@@ -166,7 +170,7 @@ nav ul li a:hover {
 }
 
 .scroll-to-top:hover {
-  background-color: #BEC8B7;
+  background-color: #709c94;
 }
 
 .scroll-to-top.show {
