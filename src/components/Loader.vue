@@ -32,8 +32,8 @@ export default {
 }
 
 .loader-logo {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   animation: scale 1.5s ease-in-out infinite;
 }
 

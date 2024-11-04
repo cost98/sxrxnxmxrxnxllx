@@ -122,6 +122,7 @@ export default {
 .text{
   padding-left: 10px;
   padding-right: 10px;
+  color: #555;
 }
 .timeline-section {
   text-align: center;
@@ -245,12 +246,13 @@ export default {
     position: relative;
 
     &__heading {
-      color: #BEC8B7;
+      color: #333;
     }
 
     &__date {
       padding-bottom: 10px;
       font-style: italic;
+      color: #999;
     }
 
     &__tag {

@@ -8,31 +8,34 @@
 
     <div class="contact-container">
       <!-- Contact Card for Phone -->
-      <div class="contact-card">
+      <a :href="'tel:' + phone" class="contact-card">
         <div class="icon-wrapper">
           <IconComponent name="phone" color="white" />
-
         </div>
         <div class="contact-content">
           <h2 class="contact-title">Telefono</h2>
           <p class="contact-info">{{ phone }}</p>
         </div>
-      </div>
+      </a>
 
       <!-- Contact Card for Email -->
-      <div class="contact-card">
+      <a :href="'mailto:' + email" class="contact-card">
         <div class="icon-wrapper">
           <IconComponent name="envelope" color="white" />
-
         </div>
         <div class="contact-content">
           <h2 class="contact-title">Email</h2>
           <p class="contact-info">{{ email }}</p>
         </div>
-      </div>
+      </a>
 
       <!-- Contact Card for Address -->
-      <div class="contact-card">
+      <a
+          :href="'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(address)"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+      >
         <div class="icon-wrapper">
           <IconComponent name="map-location-dot" color="white" />
         </div>
@@ -40,7 +43,7 @@
           <h2 class="contact-title">Indirizzo</h2>
           <p class="contact-info">{{ address }}</p>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- Map Section -->
@@ -63,7 +66,7 @@ export default {
   props: {
     phone: {
       type: String,
-      default: "+39 012 345 6789"
+      default: "+39 342 522 4862"
     },
     email: {
       type: String,
@@ -71,7 +74,7 @@ export default {
     },
     address: {
       type: String,
-      default: "Via Roma 123, 00100 Roma, Italia"
+      default: "Roma, Piazza Camillo Finocchiaro Aprile n.3"
     }
   }
 }
@@ -110,6 +113,8 @@ export default {
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: inherit; /* mantiene il colore del testo */
+  text-decoration: none; /* rimuove la sottolineatura */
 }
 
 .contact-card:hover {

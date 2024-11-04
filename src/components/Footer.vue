@@ -60,15 +60,15 @@ export default {
     },
     companyName: {
       type: String,
-      default: "Serene Marinelli"
+      default: "Serena Marinelli"
     },
     address: {
       type: String,
-      default: "Via Roma 123, 00100 Roma, Italia"
+      default: "Roma, Piazza Camillo Finocchiaro Aprile n.3"
     },
     phone: {
       type: String,
-      default: "+39 012 345 6789"
+      default: "+39 342 522 4862"
     },
     email: {
       type: String,
