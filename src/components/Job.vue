@@ -143,7 +143,7 @@ export default {
 /* Container principale */
 .job-list {
   margin: 0 auto;
-  padding: 40px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -161,7 +161,7 @@ export default {
   background-color: #f9f9f9;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 30px;
+  padding: 2px;
   scroll-snap-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 30px;
@@ -172,6 +172,7 @@ export default {
 .job-label {
   top: 20px;
   left: 20px;
+  margin-left: 25%;
   margin-bottom: 40px;
   background-color: #BEC8B7;
   color: white;
