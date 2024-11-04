@@ -1,3 +1,8 @@
+# 0.7.0
+- [EDITING] Add Job section
+- [EDITING] Add .ico
+- [EDITING] Generic changes
+
 # 0.6.0
 - [EDITING] Generic changes
 
