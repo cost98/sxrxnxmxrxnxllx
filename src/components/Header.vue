@@ -12,9 +12,9 @@
       <ul v-if="!isMenuOpen" :class="{ 'active': isMenuOpen }" class="navbar-menu">
         <li><a @click.prevent="scrollToSection('home')">{{ home }}</a></li>
         <li><a @click.prevent="scrollToSection('about')">{{ about }}</a></li>
-        <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
-        <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
         <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+        <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
+        <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
         <li><a @click.prevent="scrollToSection('job')">{{ jobs }}</a></li>
 
       </ul>
@@ -26,9 +26,9 @@
         <ul>
           <li><a @click.prevent="scrollToSection('home')">{{ home }}</a></li>
           <li><a @click.prevent="scrollToSection('about')">{{ about }}</a></li>
-          <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
-          <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
           <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
+          <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
+          <li><a @click.prevent="scrollToSection('working')">{{ working }}</a></li>
           <li><a @click.prevent="scrollToSection('job')">{{ jobs }}</a></li>
         </ul>
       </div>
@@ -38,6 +38,7 @@
 
 
 <script>
+
 export default {
   name: "HeaderComponent",
   props: {
@@ -195,7 +196,7 @@ ul li a:hover {
   color: #BEC8B7; /* Hover color for links in overlay */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .menu-toggle {
     display: flex; /* Show the toggle for mobile */
   }
@@ -216,7 +217,7 @@ ul li a:hover {
   }
 
   .logo img {
-    height: 50px; /* Logo size */
+    height: 60px; /* Logo size */
   }
 }
 </style>

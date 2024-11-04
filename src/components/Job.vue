@@ -144,16 +144,9 @@ export default {
 .job-list {
   margin: 0 auto;
   padding: 40px;
-  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-/* Titolo principale */
-.title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #333;
-}
 
 /* Container per lo scroll orizzontale */
 .job-container {
