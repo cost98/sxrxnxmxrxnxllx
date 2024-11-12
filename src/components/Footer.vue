@@ -72,7 +72,7 @@ export default {
     },
     email: {
       type: String,
-      default: "info@example.com"
+      default: "serena1marinelli@gmail.com"
     },
     socialLinks: {
       type: Array,
