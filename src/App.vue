@@ -54,14 +54,14 @@ export default {
       isLoading: true,
       assets: [
         require('@/assets/logo.png'),
-        require('@/assets/logo_string.png'),
         require('@/assets/parent-support.webp'),
         require('@/assets/family-support.webp'),
         require('@/assets/individual-support.webp'),
         require('@/assets/couple-support.webp'),
         require('@/assets/bariatric-evaluation.webp'),
-        require('@/assets/personal.webp')
-        // Puoi aggiungere altre immagini o assets in questo array
+        require('@/assets/personal.webp'),
+        require('@/assets/Virtual-Regular.otf'),
+        require('@/assets/Virtual-Regular.ttf')
       ],
       showScrollButton: false,
     };
@@ -158,7 +158,7 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #709c94;
+  background-color: #BEC8B7FF;
   color: white;
   font-size: 24px;
   border-radius: 50%;
