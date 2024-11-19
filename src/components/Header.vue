@@ -2,7 +2,7 @@
   <nav>
     <div class="navbar-container">
       <div class="logo">
-        <img src="@/assets/logo_string.png" alt="Logo" />
+        Serena Marinelli
       </div>
       <div class="menu-toggle" @click="toggleMenu">
         <div class="bar" v-bind:class="{ 'open': isMenuOpen }"></div>
@@ -87,6 +87,14 @@ export default {
 }
 </script>
 <style scoped>
+@font-face {
+  font-family: 'Virtual';
+  src: url('@/assets/Virtual-Regular.otf') format('opentype'),
+  url('@/assets/Virtual-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -105,8 +113,11 @@ nav {
   padding: 15px 20px; /* Padding for the navbar */
 }
 
-.logo img {
-  height: 60px; /* Logo size */
+.logo {
+  font-family: 'Virtual', sans-serif;
+  font-size: clamp(45px, 5vw, 80px);;
+  font-weight: normal;
+  color: #BEC8B7FF;
 }
 
 .menu-toggle {
