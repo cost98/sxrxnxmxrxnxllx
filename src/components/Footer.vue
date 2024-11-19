@@ -17,6 +17,7 @@
           <li><a @click.prevent="scrollToSection('about')">{{ about }}</a></li>
           <li><a @click.prevent="scrollToSection('services')">{{ services }}</a></li>
           <li><a @click.prevent="scrollToSection('contact')">{{ contact }}</a></li>
+          <li><a href="https://www.iubenda.com/privacy-policy/45671686" rel="noreferrer nofollow" target="_blank">Privacy Policy</a></li>
         </ul>
       </div>
 
