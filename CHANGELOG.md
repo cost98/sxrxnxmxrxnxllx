@@ -1,3 +1,10 @@
+# 0.9.0
+- [EDITING] Change email
+- [EDITING] Logo with font
+
+# 0.8.0
+- [PIPELINE] Add ftp deploy
+
 # 0.7.0
 - [EDITING] Add Job section
 - [EDITING] Add .ico
