@@ -10,8 +10,8 @@
       <AboutComponent />
       <ServicesComponent />
       <ContactComponent />
-      <TimelineComponent  reversed/>
-      <JobComponent/>
+      <TimelineComponent reversed />
+      <JobComponent />
       <FooterComponent />
       <div
           v-if="showScrollButton"
@@ -19,7 +19,7 @@
           :class="{ 'scroll-to-top': true, show: showScrollButton }"
           title="Torna su"
       >
-        <IconComponent name="arrow-up"/>
+        <IconComponent name="arrow-up" />
       </div>
     </div>
   </div>
@@ -72,8 +72,14 @@ export default {
         return new Promise((resolve, reject) => {
           const img = new Image();
           img.src = src;
-          img.onload = resolve;
-          img.onerror = reject;
+          img.onload = () => {
+            console.log(`Immagine caricata con successo: ${src}`);
+            resolve();
+          };
+          img.onerror = (error) => {
+            console.error(`Errore nel caricamento dell'immagine: ${src}`, error);
+            reject(error);
+          };
         });
       });
       return Promise.all(promises);
@@ -86,7 +92,44 @@ export default {
     },
     handleScroll() {
       this.showScrollButton = window.scrollY > 300;
+      console.log("Posizione scroll:", window.scrollY, "Mostra bottone:", this.showScrollButton);
     },
+    initializeIubenda() {
+      if (window._iub) {
+        window._iub.csConfiguration = {
+          cookiePolicyId: 45671686,
+          siteId: 3842443,
+          timeoutLoadConfiguration: 30000,
+          lang: 'it',
+          enableTcf: true,
+          tcfVersion: 2,
+          tcfPurposes: {
+            "2": "consent_only",
+            "3": "consent_only",
+            "4": "consent_only",
+            "5": "consent_only",
+            "6": "consent_only",
+            "7": "consent_only",
+            "8": "consent_only",
+            "9": "consent_only",
+            "10": "consent_only"
+          },
+          invalidateConsentWithoutLog: true,
+          googleAdditionalConsentMode: true,
+          consentOnContinuedBrowsing: false,
+          banner: {
+            position: "top",
+            acceptButtonDisplay: true,
+            customizeButtonDisplay: true,
+            closeButtonDisplay: true,
+            closeButtonRejects: true,
+            fontSizeBody: "14px"
+          }
+        };
+      } else {
+        console.error("Iubenda non è stato caricato correttamente");
+      }
+    }
   },
 
   beforeUnmount() {
@@ -94,8 +137,37 @@ export default {
   },
 
   mounted() {
+    // Carica gli script di Iubenda
+    const script1 = document.createElement('script');
+    script1.src = 'https://cdn.iubenda.com/cs/tcf/stub-v2.js';
+    script1.async = true;
+    script1.onload = () => {
+      console.log('Script 1 caricato con successo');
+      this.initializeIubenda();
+    };
+    script1.onerror = (err) => {
+      console.error('Errore durante il caricamento dello script 1', err);
+    };
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.src = 'https://cdn.iubenda.com/cs/iubenda_cs.js';
+    script2.async = true;
+    script2.onload = () => {
+      console.log('Script 2 caricato con successo');
+      this.initializeIubenda();
+    };
+    script2.onerror = (err) => {
+      console.error('Errore durante il caricamento dello script 2', err);
+    };
+    document.head.appendChild(script2);
+
+    // Aggiungi l'event listener per il scroll
     window.addEventListener('scroll', this.handleScroll);
-    // Inizia a caricare gli asset
+
+    // Aggiungi il caricamento degli asset
+    console.log("Inizio il caricamento degli asset");
+
     const assetPromise = this.loadAssets();
 
     // Forza un caricamento minimo di 2 secondi
@@ -104,6 +176,7 @@ export default {
     // Aspetta sia il caricamento degli asset che i 2 secondi minimi
     Promise.all([assetPromise, minLoadingTime])
         .then(() => {
+          console.log("Tutti gli asset sono stati caricati correttamente, e il tempo minimo è trascorso.");
           this.isLoading = false;
         })
         .catch((error) => {
@@ -149,6 +222,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #BEC8B7;
 }
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
