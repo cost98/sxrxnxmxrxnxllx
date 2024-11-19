@@ -226,7 +226,7 @@ nav ul li a:hover {
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   width: 50px;
   height: 50px;
   display: flex;
