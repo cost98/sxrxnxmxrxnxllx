@@ -1,4 +1,7 @@
 # 0.9.0
+- [EDITING] Add iubenda
+
+# 0.9.0
 - [EDITING] Change email
 - [EDITING] Logo with font
 
