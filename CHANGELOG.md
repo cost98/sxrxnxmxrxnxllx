@@ -1,4 +1,8 @@
-# 0.9.0
+# 1.1.0
+- [EDITING] Change job list
+- [EDITING] Change image size
+
+# 1.0.0
 - [EDITING] Add iubenda
 
 # 0.9.0
