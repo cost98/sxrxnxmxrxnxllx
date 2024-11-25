@@ -160,7 +160,7 @@ export default {
   right: 0;
   bottom: 0;
   background-image: inherit;
-  background-size: 120%;
+  background-size: 150%;
   background-position: center;
   transition: background-size 0.3s ease;
   z-index: 0;
