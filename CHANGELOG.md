@@ -1,3 +1,6 @@
+# 1.2.0
+- [EDITING] Add metadata
+
 # 1.1.0
 - [EDITING] Change job list
 - [EDITING] Change image size
